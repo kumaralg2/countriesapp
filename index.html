@@ -10,6 +10,19 @@
 <body ng-app="countriesapp">
 
 <div ng-controller="CountryCountroller as countryCtrl">
+    
+    <ul>
+    	<li ng-repeat = "c in countryCtrl.countries">
+         {{c.name}}
+           <ul>
+           	 <li ng-repeat = "s in c.states">
+           	 	{{s.name}}
+           	 </li>
+           	</ul>
+     </li>
+   </ul>
+     
+
 	{{ "Hello" + " " + countryCtrl.countries.name + " "+"!!"}}
 </div>
 
